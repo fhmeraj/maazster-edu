@@ -7,7 +7,7 @@ import Testimonials from "@/app/testimonials/page";
 import { FaUserGroup } from "react-icons/fa6";
 import { ChevronsLeftRightEllipsis } from "lucide-react";
 import BannerSection from "./banner";
-import Journey from "./Journey";
+import Journey from "./journey/journey";
 
 
 export default function Home() {
