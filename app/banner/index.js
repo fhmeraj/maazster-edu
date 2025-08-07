@@ -5,7 +5,7 @@ const BannerSection = () => {
   return (
     <div style={{ backgroundSize: 'cover',
     backgroundPosition: 'center',
-    height: '500px',}} className=' flex  bg-[url("https://maazstertech.in/assets/images/cta-bg.png")]'>
+    height: '700px',}} className=' flex  bg-[url("https://maazstertech.in/assets/images/cta-bg.png")]'>
     <div   className='flex justify-between items-center w-full  h-full '>
       <div  className='flex items-center justify-center w-[50%] h-[50%]'>
         <img  className=' animate-bounce h-[300px] ml-16 mt-20' src='https://maazstertech.in/assets/images/cta-left-image.png'/>

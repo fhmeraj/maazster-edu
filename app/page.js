@@ -7,6 +7,7 @@ import Testimonials from "@/app/testimonials/page";
 import { FaUserGroup } from "react-icons/fa6";
 import { ChevronsLeftRightEllipsis } from "lucide-react";
 import BannerSection from "./banner";
+import Journey from "./Journey";
 
 
 export default function Home() {
@@ -56,63 +57,17 @@ export default function Home() {
         </h1>
         Explore the different ways I can help you learn and grow in tech
       </div>
+      
+      
 
-      {/* card */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-4 mt-12 ">
-        {/* <!-- Card 1 --> */}
-        <div className="bg-white rounded-3xl shadow-2xl p-6 hover:scale-110  duration-500  hover:bg-orange-500  hover:text-white">
-          <h3 className="text-xl font-semibold mb-2">Online Live Classes</h3>
-          <p className="">
-            Interactive online sessions with real-time Q&A and project-based
-            learning, accessible from anywhere.
-          </p>
-        </div>
+      
+      <Journey /> 
 
-        {/* <!-- Card 2 --> */}
-        <div className="bg-white rounded-3xl shadow-2xl p-6  hover:scale-110  duration-500  hover:bg-orange-500  hover:text-white">
-          <h3 className="text-xl font-semibold mb-2 ">
-            <span>
-              <FaUserGroup />
-            </span>
-            In-Person Workshops
-          </h3>
-          <p className="">
-            Hands-on workshops designed to provide practical experience and
-            collaborative learning in a classroom setting.
-          </p>
-        </div>
 
-        {/* <!-- Card 3 --> */}
-        <div className="bg-white rounded-3xl shadow-2xl p-6  hover:scale-110  duration-500  hover:bg-orange-500  hover:text-white ">
-          <h3 className="text-xl font-semibold mb-2 ">1-on-1 Mentorship</h3>
-          <p className="">
-            Personalized guidance and support tailored to your learning goals,
-            with direct feedback and career advice.
-          </p>
-        </div>
-
-        {/* <!-- Card 4 --> */}
-        <div className="bg-white rounded-3xl shadow-2xl p-6  hover:scale-110  duration-500  hover:bg-orange-500  hover:text-white">
-          <h3 className="text-xl font-semibold mb-2">
-            <span>
-              <ChevronsLeftRightEllipsis />
-            </span>
-            Custom Course Creation
-          </h3>
-          <p className="">
-            Development of custom courses and learning paths to suit your unique
-            needs and interests in technology.
-          </p>
-        </div>
-      </div>
       <section className="mt-16">
         <Courses />
         <Plans />
         <BannerSection/>
-        <div className="">
-          <div> girl image</div>
-          <div> content</div>
-        </div>
         <Testimonials />
         {/* other sections */}
       </section>
