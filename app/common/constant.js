@@ -1,3 +1,5 @@
+import axios from "axios";
+
 export const PATH = {
   HOME: "/",
   COURSES: "/courses",
@@ -12,4 +14,15 @@ export const PATH = {
   CAREERS: "/careers",
   HELP: "/help",
   SUPPORT: "/support",
+  PROJECTS: "/project",
+  INSTAGRAM: "https://www.instagram.com/maazstertech",
+  FACEBOOK: "https://www.facebook.com/p/Maazster-Tech-Pvt-Ltd-100067027774467/",
+  LINKEDIN:
+    "https://www.linkedin.com/company/maazster-tech/?originalSubdomain=in",
+  YOUTUBE: "https://www.youtube.com/@Maazstertechofficial",
+  X: "https://x.com/Maazstertech",
 };
+export const API = axios.create({
+  baseURL: process.env.BASE_URL || "http://localhost:8080",
+  withCredentials: true,
+});
