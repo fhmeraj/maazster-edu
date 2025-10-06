@@ -1,6 +1,45 @@
 import React from "react";
 import Navbar from "@/app/navbar/page";
+import { FaGears } from "react-icons/fa6";
+import { IoCodeSlash } from "react-icons/io5";
+import { VscGraph } from "react-icons/vsc";
+import { HiSpeakerphone } from "react-icons/hi";
+import { FaPencil } from "react-icons/fa6";
+import { BsFillCupHotFill } from "react-icons/bs";
+import Image from "next/image";
+import Java from "../common/a/java.png";
+import SpingBoot from "../common/a/spring-boot.png";
+import Mysql from "../common/a/mysql.png";
+import Docker from "../common/a/docker.webp";
+import Git from "../common/a/git.png";
+import GitHub from "../common/a/github.png";
+import HTML from "../common/a/html.webp";
+import CSS from "../common/a/css.png";
+import BootStrap from "../common/a/bootstrap.png";
+import TypScript from "../common/a/typescript.png";
+import Figma from "../common/a/figma.png";
+import VSCODE from "../common/a/vscode.png";
+import Postman from "../common/a/postman.png";
+import jenking from "../common/a/Jenkins.png";
+import Kafka from "../common/a/kafka.svg";
+import Hibernate from "../common/a/hibernate.svg";
+import Maven from "../common/a/maven.png";
+import ReactI from "../common/a/react.webp";
+import Python from "../common/a/python.png";
+import CourseTop from "../common/courseTop.png";
+import { IoMdTrendingUp } from "react-icons/io";
 
+import {
+  FaReact,
+  FaJava,
+  FaDatabase,
+  FaBrain,
+  FaChartLine,
+  FaCode,
+} from "react-icons/fa";
+import Agular from "../common/a/angular.webp";
+import Link from "next/link";
+import { PATH } from "../common/constant";
 export const metadata = {
   title: "Maazster Edu : Courses",
   description: "this is course page",
@@ -33,7 +72,10 @@ const courses = [
   },
   {
     title: "Digital Marketing",
+    icon:<VscGraph />,
     description: "SEO, SEM, Social Media & more.",
+    description:
+      "Complete digital marketing mastery: SEO, SEM, Social Media Marketing, Content Strategy, Analytics, and conversion optimization.",
     duration: "3 Months",
     icon: <FaChartLine className="text-4xl text-green-500 mb-4" />,
     technologies: ["Google Ads", "Facebook Ads", "Analytics", "SEO Tools"],
@@ -64,7 +106,10 @@ const courses = [
   },
   {
     title: "Data Structures & Algorithms",
+    icon:<BsFillCupHotFill />,
     description: "DSA for coding interviews using C++/Java.",
+    description:
+      "Master DSA for coding interviews using C++/Java. Problem-solving techniques, optimization, and interview preparation.",
     duration: "4 Months",
     icon: <FaCode className="text-4xl text-yellow-500 mb-4" />,
     technologies: ["C++", "Java", "Problem Solving", "Algorithms"],
@@ -103,26 +148,182 @@ const Courses = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
-      <section id="courses" className="py-12  bg-pink-50">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-8">OUR COURSES</h2>
-          <div className=" text-2xl mb-6">
-            Explore our range of professional offerings designed to boost your
-            skills and career
+
+      <div className="relative w-full">
+        {/* Background Image */}
+        {/* <Image
+          src={CourseTop}
+          alt="Course Background"
+          className="w-full h-[350px] sm:h-[400px] md:h-[600px] object-cover mt-16"
+          priority
+        /> */}
+        <div className="relative w-full mt-16 ">
+          <Image
+            src={CourseTop}
+            alt="Course Background"
+            className="w-full h-auto object-contain "
+            priority
+          />
+        </div>
+
+        {/* Overlay Content */}
+        <div className="absolute inset-0 flex flex-col sm:flex-row">
+          {/* Right Section (Text) */}
+          <div className="flex-1 flex items-center justify-start bg-black/10 p-0  sm:[h-96]">
+            <h1
+              className="bg-gradient-to-r from-orange-500 via-orange-600 to-orange-700 
+                   bg-clip-text text-transparent mt-12 
+                   text-4xl sm:text-6xl md:text-7xl lg:text-8xl 
+                   font-bold text-left max-w-full sm:max-w-lg md:max-w-xl lg:max-w-2xl px-24"
+            >
+              Learning
+            </h1>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
+        </div>
+      </div>
+      <section className="py-12 bg-[#F97316]">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+              Why Choose Our Courses?
+            </h2>
+            <p className="text-lg md:text-xl text-white max-w-3xl mx-auto">
+              At <span className="font-semibold text-white">Maazster Edu</span>,
+              our courses are designed not just to teach theory, but to give you{" "}
+              <span className="font-semibold">practical, job-ready skills</span>
+              . Every program is built with hands-on projects, mentorship, and
+              industry-focused learning paths.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl shadow-md text-center hover:bg-gradient-to-br hover:from-orange-400 hover:to-orange-500 hover:text-white transform hover:scale-105 transition-all duration-300 hover:shadow-xl group">
+              <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-white">
+                Expert Mentors
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed group-hover:text-white">
+                Learn from experienced professionals who bring real-world
+                insights, coding practices, and industry experience directly
+                into the classroom.
+              </p>
+            </div>
+
+            <div className="p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-2xl shadow-md text-center hover:bg-gradient-to-br hover:from-orange-400 hover:to-orange-500 hover:text-white transform hover:scale-105 transition-all duration-300 hover:shadow-xl group">
+              <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-white">
+                Hands-On Projects
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed group-hover:text-white">
+                Work on real-world projects that simulate actual industry
+                scenarios and help you build a strong portfolio for your career.
+              </p>
+            </div>
+
+            <div className="p-6 bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl shadow-md text-center hover:bg-gradient-to-br hover:from-orange-400 hover:to-orange-500 hover:text-white transform hover:scale-105 transition-all duration-300 hover:shadow-xl group">
+              <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-white">
+                Career-Focused
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed group-hover:text-white">
+                Each course is structured to prepare you for job interviews,
+                coding tests, and practical challenges in the tech industry.
+              </p>
+            </div>
+
+            <div className="p-6 bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl shadow-md text-center hover:bg-gradient-to-br hover:from-orange-400 hover:to-orange-500 hover:text-white transform hover:scale-105 transition-all duration-300 hover:shadow-xl group">
+              <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-white">
+                Flexible Learning
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed group-hover:text-white">
+                Learn at your own pace with our structured modules, mentorship
+                support, and a mix of online/offline learning opportunities.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        id="courses"
+        className="py-16 md:py-20 lg:py-24 bg-gradient-to-br from-blue-50 to-indigo-100"
+      >
+        <div className="max-w-7xl mx-auto px-4 text-center">
+          {/* Stylish Header */}
+          <div className="mb-12 md:mb-16 lg:mb-20">
+            <div className="inline-block">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 mb-4 md:mb-6 relative">
+                <span className="bg-gradient-to-r from-orange-500 via-orange-600 to-orange-700 bg-clip-text text-transparent">
+                  OUR
+                </span>
+                <br />
+                <span className="text-gray-900 drop-shadow-lg bg-gradient-to-r from-orange-500 via-orange-600 to-orange-700 bg-clip-text text-transparent">
+                  COURSES
+                </span>
+
+                {/* Decorative underline */}
+                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 md:w-32 lg:w-40 h-1 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full shadow-lg"></div>
+              </h2>
+            </div>
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed mt-6 md:mt-8">
+              Explore our comprehensive range of industry-focused courses
+              designed to accelerate your tech career with hands-on projects and
+              expert mentorship
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {courses.map((course, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl p-6 shadow-2xl hover:scale-110  duration-500  hover:bg-orange-500  hover:text-white"
+                className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 border border-gray-100"
               >
-                <h3 className="text-xl font-semibold text-orange-500 mb-2">
+                <div className="flex justify-center mb-6">{course.icon}</div>
+
+                <h3 className="text-2xl font-bold text-gray-800 mb-4">
                   {course.title}
                 </h3>
-                <p className=" mb-3">{course.description}</p>
-                <span className="text-sm text-gray-500">
-                  Duration: {course.duration}
-                </span>
+
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  {course.description}
+                </p>
+
+                <div className="space-y-4 mb-6">
+                  <div className="flex justify-between items-center text-sm">
+                    <span className="text-gray-500">Duration:</span>
+                    <span className="font-semibold text-orange-500">
+                      {course.duration}
+                    </span>
+                  </div>
+
+                  <div className="flex justify-between items-center text-sm">
+                    <span className="text-gray-500">Projects:</span>
+                    <span className="font-semibold text-green-500">
+                      {course.projects}+ Real Projects
+                    </span>
+                  </div>
+
+                  <div className="flex justify-between items-center text-sm">
+                    <span className="text-gray-500">Level:</span>
+                    <span className="font-semibold text-blue-500">
+                      {course.level}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="mb-6">
+                  <p className="text-sm text-gray-500 mb-2">Technologies:</p>
+                  <div className="flex flex-wrap gap-2">
+                    {course.technologies.map((tech, techIndex) => (
+                      <span
+                        key={techIndex}
+                        className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-medium"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <button className="w-full bg-gradient-to-r from-orange-400 to-orange-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-orange-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105">
+                  <Link href={PATH.CONTACT_US}>Enroll Now</Link>
+                </button>
               </div>
             ))}
           </div>
