@@ -57,7 +57,7 @@ const ComingSoon = ({ title = "Coming Soon", subtitle = "", feature = "DEFAULT" 
                     <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 md:p-12 max-w-3xl mx-auto">
                         <div className="text-4xl sm:text-6xl md:text-8xl mb-4 md:mb-6">🚀</div>
                         <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-3 md:mb-4">
-                            We're Working Hard!
+                            We&apos;re Working Hard!
                         </h3>
                         <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 leading-relaxed">
                             In the meantime, Stay tuned. We are almost ready to launch.
