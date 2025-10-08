@@ -1,11 +1,13 @@
 import ComingSoon from '../components/ComingSoon';
+import Navbar from '../navbar/page';
 
 export default function Tutorials() {
   return (
-    <ComingSoon
-      title="Tutorials"
-      subtitle="Comprehensive Learning Resources"
-      feature="TUTORIALS"
-    />
+    <div className='w-full h-full mt-16'>
+      <Navbar/>
+      <div>
+        
+      </div>
+    </div>
   );
 }
